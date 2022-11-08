@@ -20,6 +20,9 @@
 		0ADC5ED02918FADD0012CA9A /* ActivityKitDemo.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 0ADC5ECC2918FADB0012CA9A /* ActivityKitDemo.intentdefinition */; };
 		0ADC5ED12918FADD0012CA9A /* ActivityKitDemo.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 0ADC5ECC2918FADB0012CA9A /* ActivityKitDemo.intentdefinition */; };
 		0ADC5ED42918FADD0012CA9A /* ActivityKitDemoExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 0ADC5EBF2918FADB0012CA9A /* ActivityKitDemoExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		0ADC5EDA29190EAC0012CA9A /* ActKitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADC5ED929190EAC0012CA9A /* ActKitView.swift */; };
+		0ADC5EDB29190EAC0012CA9A /* ActKitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADC5ED929190EAC0012CA9A /* ActKitView.swift */; };
+		0ADC5EDC29190F7D0012CA9A /* ActivityKitDemoLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADC5EC82918FADB0012CA9A /* ActivityKitDemoLiveActivity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +64,7 @@
 		0ADC5ECC2918FADB0012CA9A /* ActivityKitDemo.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = ActivityKitDemo.intentdefinition; sourceTree = "<group>"; };
 		0ADC5ECD2918FADD0012CA9A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0ADC5ECF2918FADD0012CA9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0ADC5ED929190EAC0012CA9A /* ActKitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActKitView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +140,7 @@
 				0ADC5EC62918FADB0012CA9A /* ActivityKitDemoBundle.swift */,
 				0ADC5EC82918FADB0012CA9A /* ActivityKitDemoLiveActivity.swift */,
 				0ADC5ECA2918FADB0012CA9A /* ActivityKitDemo.swift */,
+				0ADC5ED929190EAC0012CA9A /* ActKitView.swift */,
 				0ADC5ECC2918FADB0012CA9A /* ActivityKitDemo.intentdefinition */,
 				0ADC5ECD2918FADD0012CA9A /* Assets.xcassets */,
 				0ADC5ECF2918FADD0012CA9A /* Info.plist */,
@@ -246,6 +251,8 @@
 			files = (
 				0A56B3382914FE6600070D66 /* ContentView.swift in Sources */,
 				0ADC5ED12918FADD0012CA9A /* ActivityKitDemo.intentdefinition in Sources */,
+				0ADC5EDC29190F7D0012CA9A /* ActivityKitDemoLiveActivity.swift in Sources */,
+				0ADC5EDA29190EAC0012CA9A /* ActKitView.swift in Sources */,
 				0A56B3362914FE6600070D66 /* TryActivityKitApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -254,6 +261,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0ADC5EDB29190EAC0012CA9A /* ActKitView.swift in Sources */,
 				0ADC5EC72918FADB0012CA9A /* ActivityKitDemoBundle.swift in Sources */,
 				0ADC5EC92918FADB0012CA9A /* ActivityKitDemoLiveActivity.swift in Sources */,
 				0ADC5ED02918FADD0012CA9A /* ActivityKitDemo.intentdefinition in Sources */,
