@@ -27,12 +27,13 @@ struct ContentView: View {
     }
     
     func shoeTripAd() {
-        let liveTripAttributes = ActivityKitDemoAttributes()
-        let tripStatus = ActivityKitDemoAttributes.ContentState(value: 10)
+        print("tap...")
+        let testAttributes = ActivityKitDemoAttributes()
+        let kitStatus = ActivityKitDemoAttributes.ActivityDataStatus(value: 50)
         do{
             let tripActivity = try Activity<ActivityKitDemoAttributes>.request(
-                attributes: liveTripAttributes,
-                contentState: tripStatus)
+                attributes: testAttributes,
+                contentState: kitStatus)
             print("Did request live trip activity \(tripActivity.id)")
         }catch(let error){
             print("Error requesting live activity \(error.localizedDescription)")

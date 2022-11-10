@@ -10,13 +10,13 @@ import WidgetKit
 import SwiftUI
 
 struct ActivityKitDemoAttributes: ActivityAttributes {
+    public typealias ActivityDataStatus = ContentState
+
     public struct ContentState: Codable, Hashable {
         // Dynamic stateful properties about your activity go here!
-        var value: Int
+        var value: Float
     }
 
-    // Fixed non-changing properties about your activity go here!
-//    var name: String
 }
 
 struct ActivityKitDemoLiveActivity: Widget {
