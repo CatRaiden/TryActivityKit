@@ -14,12 +14,14 @@ struct ContentView: View {
             Image(systemName: "globe")
                 .imageScale(.large)
                 .foregroundColor(.accentColor)
-            Text("Hello, world!")
-            Button("Show ad 🎟") {
+            Text("老吳的世界!")
+            Button("老吳與狗") {
                 shoeTripAd()
             }
-            
-            Button("Stop ad 🎟") {
+            Button("老吳餵狗") {
+                stopAd()
+            }
+            Button("去吃牛肉麵離開了") {
                 stopAd()
             }
         }
