@@ -14,7 +14,7 @@ struct TrainTripView: View {
         VStack{
             HStack{
                 Text("Your 9.45 trian in on its way".capitalized)
-                Image(systemName: "train.side.front.car")
+                Image("doge")
                 Spacer()
             }
             if shouldShowDistance {

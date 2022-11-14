@@ -14,7 +14,7 @@ struct ActivityKitDemoAttributes: ActivityAttributes {
 
     public struct ContentState: Codable, Hashable {
         // Dynamic stateful properties about your activity go here!
-        var value: Float
+        var value: String
     }
 
 }
@@ -24,7 +24,7 @@ struct ActivityKitDemoLiveActivity: Widget {
         ActivityConfiguration(for: ActivityKitDemoAttributes.self) { context in
             // Lock screen/banner UI goes here
             VStack {
-                Text("Hello")
+                Text(context.state.value)
             }
             .activityBackgroundTint(Color.cyan)
             .activitySystemActionForegroundColor(Color.black)
@@ -34,19 +34,30 @@ struct ActivityKitDemoLiveActivity: Widget {
                 // Expanded UI goes here.  Compose the expanded UI through
                 // various regions, like leading/trailing/center/bottom
                 DynamicIslandExpandedRegion(.leading) {
-                    Text("Leading")
+                    Image("doge")
+                        .resizable()
+                        .frame(width: 50, height: 50)
                 }
                 DynamicIslandExpandedRegion(.trailing) {
-                    Text("Trailing")
+                    Image("wu")
+                        .resizable()
+                        .frame(width: 50, height: 50)
+                }
+                DynamicIslandExpandedRegion(.center) {
+                    Text("牛肉麵")
                 }
                 DynamicIslandExpandedRegion(.bottom) {
-                    Text("Bottom")
+                    Text("油漆")
                     // more content
                 }
             } compactLeading: {
-                Text("L")
+                Image("doge")
+                    .resizable()
+                    .frame(width: 32, height: 32)
             } compactTrailing: {
-                Text("T")
+                Image("wu")
+                    .resizable()
+                    .frame(width: 32, height: 32)
             } minimal: {
                 Text("Min")
             }

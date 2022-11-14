@@ -9,6 +9,7 @@ import SwiftUI
 import ActivityKit
 
 struct ContentView: View {
+    
     var body: some View {
         VStack {
             Image(systemName: "globe")
@@ -16,39 +17,47 @@ struct ContentView: View {
                 .foregroundColor(.accentColor)
             Text("老吳的世界!")
             Button("老吳與狗") {
-                shoeTripAd()
+                dogShowUp()
             }
             Button("老吳餵狗") {
-                stopAd()
+                feedDog()
             }
             Button("去吃牛肉麵離開了") {
-                stopAd()
+                dogGone()
             }
         }
         .padding()
     }
     
-    func shoeTripAd() {
-        print("tap...")
+    func dogShowUp() {
         let testAttributes = ActivityKitDemoAttributes()
-        let kitStatus = ActivityKitDemoAttributes.ActivityDataStatus(value: 50)
+        let dogStatus = ActivityKitDemoAttributes.ActivityDataStatus(value: "老吳的狗")
         do{
-            let tripActivity = try Activity<ActivityKitDemoAttributes>.request(
+            let dogActivity = try Activity<ActivityKitDemoAttributes>.request(
                 attributes: testAttributes,
-                contentState: kitStatus)
-            print("Did request live trip activity \(tripActivity.id)")
+                contentState: dogStatus)
+            print("Did request live activity \(dogActivity.id)")
         }catch(let error){
             print("Error requesting live activity \(error.localizedDescription)")
         }
     }
     
-    func stopAd() {
+    func feedDog() {
+        Task{
+            for activity in Activity<ActivityKitDemoAttributes>.activities {
+                await activity.update(using: Activity<ActivityKitDemoAttributes>.ContentState(value: "餵個狗狗"))
+            }
+        }
+    }
+    
+    func dogGone() {
         Task{
             for activity in Activity<ActivityKitDemoAttributes>.activities {
                 await activity.end(dismissalPolicy: .immediate)
             }
         }
     }
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
