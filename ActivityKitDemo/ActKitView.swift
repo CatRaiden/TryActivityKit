@@ -7,23 +7,26 @@
 
 import SwiftUI
 
-struct TrainTripView: View {
-    @State var trinDistance : Float
-    @State var shouldShowDistance : Bool = true
+struct FeedingView: View {
     var body: some View {
         VStack{
             HStack{
-                Text("Your 9.45 trian in on its way".capitalized)
-                Image("doge")
+                Text("老吳的狗喜歡吃牛肉麵～".capitalized)
                 Spacer()
             }
-            if shouldShowDistance {
-                ProgressView("Five Kings Station", value: trinDistance, total: 100)
+            HStack {
+                Image("doge")
+                    .resizable()
+                    .frame(width: 50, height: 50)
+                ProgressView("老吳好感度", value: 50, total: 100)
                     .padding()
-                    .font(.caption2)
+                .font(.caption2)
+                Image("wu")
+                    .resizable()
+                    .frame(width: 50, height: 50)
             }
             HStack{
-                Text("no delays expected.".capitalized)
+                Text("也喜歡裝修與做麵包".capitalized)
                 Spacer()
             }
         }
@@ -31,9 +34,9 @@ struct TrainTripView: View {
     }
 }
 
-struct TrainTripView_Previews: PreviewProvider {
+struct FeedingView_Previews: PreviewProvider {
     static var previews: some View {
-        TrainTripView(trinDistance: 25.0)
+        FeedingView()
             .previewLayout(PreviewLayout.fixed(width: 400, height: 200))
     }
 }

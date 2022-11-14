@@ -23,11 +23,7 @@ struct ActivityKitDemoLiveActivity: Widget {
     var body: some WidgetConfiguration {
         ActivityConfiguration(for: ActivityKitDemoAttributes.self) { context in
             // Lock screen/banner UI goes here
-            VStack {
-                Text(context.state.value)
-            }
-            .activityBackgroundTint(Color.cyan)
-            .activitySystemActionForegroundColor(Color.black)
+            FeedingView()
             
         } dynamicIsland: { context in
             DynamicIsland {
